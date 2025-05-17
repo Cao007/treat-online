@@ -1,0 +1,35 @@
+// 自定义全局的css变量
+:root {
+  // 按钮
+  --treat-button-primary-background: #16c2a3;
+  --treat-button-primary-border-color: #16c2a3;
+}
+
+// 覆盖vant的css变量
+:root:root {
+  --van-button-primary-background: var(--treat-button-primary-background);
+  --van-button-primary-border-color: var(--treat-button-primary-border-color);
+}
+
+// vant浅色主题样式，一般情况下不需要修改
+.van-theme-light {
+  body {
+    // 按钮
+    .van-button--primary {
+    }
+  }
+}
+
+// vant深色主题样式
+.van-theme-dark {
+  body {
+    color: #f5f5f5;
+    background-color: black;
+
+    // 按钮
+    .van-button--primary {
+      background-color: blue;
+      border-color: blue;
+    }
+  }
+}
