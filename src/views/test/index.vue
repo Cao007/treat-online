@@ -23,7 +23,14 @@
       <p>{{ t('common.hello') }}</p>
       <van-button @click="toggleLang">{{ t('common.changeLang') }}</van-button>
       <van-field v-model="textVal" :label="t('user.nickname')" :placeholder="t('user.welcome')" />
-      <van-pagination :total-items="24" :items-per-page="5" />
+      <van-pagination v-model="currentPage" :total-items="24" :items-per-page="5" />
+      <van-card
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
+      />
     </div>
 
     <div>
@@ -77,6 +84,7 @@ const { toggleTheme } = useThemeStore()
 
 // 国际化
 const textVal = ref('')
+const currentPage = ref(1)
 const { t } = useI18n()
 const { setLocale } = useLocaleStore()
 const { locale } = storeToRefs(useLocaleStore())

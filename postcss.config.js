@@ -1,7 +1,7 @@
 export default {
   plugins: {
     'postcss-px-to-viewport': {
-      viewportWidth: 375, // 视窗的宽度，对应的是我们设计稿的宽度，一般是750
+      viewportWidth: 750, // 视窗的宽度，设置为设计稿的宽度
     },
   },
 }

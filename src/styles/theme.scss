@@ -1,14 +1,76 @@
-// 自定义全局的css变量
-:root {
-  // 按钮
-  --treat-button-primary-background: #16c2a3;
-  --treat-button-primary-border-color: #16c2a3;
-}
+@use './variables.scss' as variables;
 
-// 覆盖vant的css变量
+// 覆盖vant的默认样式
+// 在css变量中使用scss变量,需要使用#{}
 :root:root {
-  --van-button-primary-background: var(--treat-button-primary-background);
-  --van-button-primary-border-color: var(--treat-button-primary-border-color);
+  // Color
+  --van-primary-color: #{variables.$primary-color};
+
+  // Padding
+  --van-padding-base: 8px; // 原 4px
+  --van-padding-xs: 16px; // 原 8px
+  --van-padding-sm: 24px; // 原 12px
+  --van-padding-md: 32px; // 原 16px
+  --van-padding-lg: 48px; // 原 24px
+  --van-padding-xl: 64px; // 原 32px
+
+  // Font
+  --van-base-font:
+    -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto,
+    'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  --van-price-font: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+  --van-font-size-xs: 20px; // 原 10px
+  --van-font-size-sm: 24px; // 原 12px
+  --van-font-size-md: 28px; // 原 14px
+  --van-font-size-lg: 32px; // 原 16px
+  --van-font-bold: 600;
+
+  // Line Height
+  --van-line-height-xs: 28px; // 原 14px
+  --van-line-height-sm: 36px; // 原 18px
+  --van-line-height-md: 40px; // 原 20px
+  --van-line-height-lg: 44px; // 原 22px
+
+  // Animation
+  --van-duration-base: 0.3s;
+  --van-duration-fast: 0.2s;
+  --van-ease-out: ease-out;
+  --van-ease-in: ease-in;
+
+  // Border
+  --van-border-color: var(--van-gray-3);
+  --van-border-width: 1px;
+  --van-radius-sm: 6px; // 原 2px
+  --van-radius-md: 10px; // 原 4px
+  --van-radius-lg: 16px; // 原 8px
+  --van-radius-max: 999px;
+
+  // button
+  --van-button-mini-height: 48px;
+  --van-button-small-height: 64px;
+  --van-button-normal-padding: 0 30px;
+  --van-button-large-height: 100px;
+  --van-button-default-height: 88px;
+  --van-button-loading-icon-size: 40px;
+
+  // NavBar
+  --van-nav-bar-height: 92px; // 原 46px
+  --van-nav-bar-arrow-size: 32px; // 原 16px
+
+  // card商品
+  --van-card-thumb-size: 196px; // 原 88px
+  --van-card-title-line-height: 32px; // 原 16px
+
+  // Pagination
+  --van-pagination-height: 80px;
+  --van-pagination-item-width: 72px;
+
+  // Field输入框
+  --van-field-icon-size: 36px;
+  --van-field-clear-icon-size: 36px;
+  --van-field-error-message-font-size: 24px;
+  --van-field-text-area-min-height: 120px;
+  --van-field-word-limit-line-height: 32px;
 }
 
 // vant浅色主题样式，一般情况下不需要修改

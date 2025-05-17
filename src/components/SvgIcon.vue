@@ -79,7 +79,7 @@ const customSizeStyle = computed(() => {
 }
 
 .svg-icon--medium {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .svg-icon--large {
